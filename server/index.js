@@ -7,6 +7,7 @@ const User = require('./models/user');
 const config = require('./config/keys')
 
 const authRouter = require('./routes/authRoutes')(User)
+const userRouter = require('./routes/userRoutes')(User)
 mongoose.connect(config.mongoURI, function(err){
   if (err) {
     console.log('Error connecting to the database')
@@ -23,6 +24,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 app.use('/auth', authRouter)
+app.use('/user', userRouter)
 
 const PORT = process.env.PORT || 8080
 
