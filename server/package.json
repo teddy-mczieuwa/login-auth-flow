@@ -4,6 +4,9 @@
   "description": "login auth flow with passport",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
   "dependencies": {
     "bcrypt": "^3.0.1",
     "bcrypt-nodejs": "^0.0.3",
