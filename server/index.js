@@ -28,4 +28,4 @@ app.use('/user', userRouter)
 
 const PORT = process.env.PORT || 8080
 
-app.listen(PORT, () => {console.log('App is listening on port ' + PORT)})
+app.listen(PORT, () => {console.log('App is listening on port yes ' + PORT)})
