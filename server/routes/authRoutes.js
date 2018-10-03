@@ -13,7 +13,7 @@ const authRoutes = (User) => {
   .post(authController.signup)
 
   authRouter.route('/signin')
-  .post(requireSignin, authController.signin)
+  .post(requireSignin, authController.signin);
 
   authRouter.route('/logout')
   .get(authController.logout)
