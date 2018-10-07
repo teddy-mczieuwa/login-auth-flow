@@ -1,0 +1,58 @@
+
+.SignIn {
+    box-sizing: border-box;
+    padding: 2em;
+    box-shadow: 0 2px 2px #616b5c;
+    width: 60%;
+    /*height: 500px;*/
+    position: absolute;
+    margin: 20px auto;
+    font-family: 'PT Sans', sans-serif;
+    display: block;
+    background: rgba(0,0,0,.2);
+    border-radius: .9em;
+    left: 50%;
+    top: 50%;
+    transform:  skew(30deg, 30deg) scale(.001) rotate(-30deg);
+    max-width: 500px;
+    min-width: 300px;
+    z-index: 50;
+    transition: .5s all ease;
+    min-height: 380px;
+
+
+}
+
+.SignIn h1{
+    color: white
+}
+
+.SlideIn {
+    /*transform: translateX(0);*/
+    transform: skew(0) translate(-50%,-50%) scale(1) rotate(0deg);
+    transition: .5s all ease;
+
+}
+
+
+.Toggler{
+    color: #5aff6d;
+    font-weight: bold;
+    cursor: pointer
+}
+
+.SignIn p{
+    color: white
+}
+
+.SignIn h1{
+    color: white
+}
+
+ .SlideOut{
+    transform: skew(30deg, 30deg) scale(0.001) rotate(30deg);
+    transition: .5s all ease
+
+}
+
+

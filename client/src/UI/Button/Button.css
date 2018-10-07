@@ -1,0 +1,41 @@
+.Success{
+    padding: .8em;
+    border-radius: .5em;
+    background: #0aee55;
+    color: white;
+    border: none;
+    transition: .3s all ease;
+    margin-top: 4px;
+
+}
+
+
+.Success:hover{
+    background: #22a906;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .3s all ease;
+}
+
+.Success:disabled{
+     cursor: not-allowed;
+     background: rgba(256,256,256, 0.2);
+ }
+.Success:disabled:hover{
+    transform: scale(1);
+}
+.Danger{
+    padding: 1em;
+    border-radius: 3px;
+    background: #ee174a;
+    color: white
+}
+
+.Danger:hover{
+    background: #83170e
+}
+
+.Danger:disabled{
+    cursor: not-allowed;
+    background: lightgrey;
+}
