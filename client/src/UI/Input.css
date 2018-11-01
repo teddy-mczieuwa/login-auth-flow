@@ -1,0 +1,69 @@
+.Input{
+    width: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 auto
+
+}
+
+.Label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.InputElement {
+    outline: none;
+    border: 0.4px solid #ccc;
+    background-color: rgba(0,0,0,.5);
+    padding: 6px 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: .3em;
+    min-width: 150px;
+    margin: 0 auto;
+
+
+}
+
+.InputElement:focus {
+    outline: none;
+    background-color: white;
+
+}
+
+.InputElement:disabled{
+    cursor: not-allowed;
+    background-color: grey;
+}
+.Invalid{
+     border: 2px solid #e10000;
+     background: pink;
+    transition: .4s all ease
+ }
+.Valid{
+    border: 2px solid #45a418;
+    transition: .4s all ease
+}
+
+
+.InputError{
+    transition: 3s;
+    margin-bottom: -9px;
+    display: block;
+    color: white;
+    font-size: 1em;
+
+}
+
+
+.InputError span{
+    text-transform: capitalize;
+    color: red;
+
+}
+
+#ConfirmPasswordError{
+    margin-bottom: 0;
+}

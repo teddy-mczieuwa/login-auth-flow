@@ -13,13 +13,13 @@ exports.signin = (req, res) => {
 }
 
 exports.logout = (req, res) => {
-  req.logout()
+  req.logout();
   res.send(req.user)
 }
 
 exports.signup = (req, res) => {
-  const email = req.body.email
-  const password = req.body.password
+  const email = req.body.email;
+  const password = req.body.password;
 
   if (!email || !password) {
    return res.status(422).send({error: 'Please provide an email and password'})
@@ -27,7 +27,7 @@ exports.signup = (req, res) => {
 
   User.findOne({email:email}).then(existingUser => {
     if (existingUser) {
-      return res.status(422).send({msg: 'A user with thesame email already exists'})
+      return res.status(422).send({msg: 'A user with the same email already exists'})
     }
 
     const user = new User()

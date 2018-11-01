@@ -1,0 +1,55 @@
+.NavigationItem{
+    margin: 0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-flow: row;
+    justify-content: flex-end;
+}
+
+.NavigationItem a{
+    box-sizing: border-box;
+    cursor: pointer;
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+
+    border-bottom: 4px solid transparent; /*will become important with hover*/
+    display: block;
+    height: 56px;
+}
+
+.NavigationItem .Active{
+    border-bottom: 3px solid #5aff6d;
+    background: #2f433c;
+}
+
+.NavigationItem a:hover{
+    border-bottom: 3px solid #5aff6d;
+    background: #2f433c;
+
+}
+
+.NavigationItem  .Avatar{
+
+    width: 12%;
+    max-width: 150px;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: .2px 2px #222;
+    cursor: pointer;
+
+}
+
+.Avatar:hover{
+    opacity: 0.7
+}
+
+@media(max-width: 550px){
+    .DesktopOnly{
+        display: none;
+    }
+}
