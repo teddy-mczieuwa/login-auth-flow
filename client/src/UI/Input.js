@@ -6,7 +6,7 @@ const input = props => {
     let inputElement = null;
     let inputClass = 'InputElement';
     let validationError = null;
-    if (props.invalid && props.shouldBeValidated && props.touched){
+    if (props.invalid && props.shouldBeValidated && props.touched && props.isBlurredOut){
         inputClass = 'InputElement Invalid';
         switch(props.valueType){
             case 'email':
@@ -37,6 +37,7 @@ const input = props => {
             inputElement = <input  className= {inputClass}
                                    {...props.elementConfig}
                                    value={props.value} onChange={props.changed}
+                                   onBlur={props.blurred}
                                    disabled={props.disabled}
             />;
             break;

@@ -31,6 +31,7 @@ class Auth extends Component{
 
                 valid: false,
                 touched: false,
+                blurred: false,
                 disabled: false
             },
 
@@ -51,6 +52,7 @@ class Auth extends Component{
 
                 valid: false,
                 touched: false,
+                blurred: false,
                 disabled: false,
             },
             confirmPassword: {
@@ -69,6 +71,7 @@ class Auth extends Component{
 
                 valid: false,
                 touched: false,
+                blurred: false,
                 disabled: true
             }
         },
@@ -130,6 +133,18 @@ class Auth extends Component{
         this.setState({controls: controls, formValidity: isValid})
     };
 
+    onBlurHandler = (event, inputIdentifier)=> {
+        let controlsForBlur = {
+            ...this.state.controls,
+            [inputIdentifier]: {
+                ...this.state.controls[inputIdentifier],
+                blurred: true
+            }
+
+        }
+        this.setState({controls: controlsForBlur})
+    }
+
 
     onSubmitHandler= (event)=> {
         event.preventDefault();
@@ -187,10 +202,12 @@ class Auth extends Component{
                             elementConfig={input.config.elementConfig}
                             changed={(event)=>this.onChangeHandler(event,input.id)}
                             touched={input.config.touched}
+                            isBlurredOut={input.config.blurred}
                             invalid={!input.config.valid}
                             shouldBeValidated = {true}
                             valueType={input.id}
                             disabled={input.config.disabled}
+                            blurred={(event)=>this.onBlurHandler(event, input.id)}
 
                         />
                     })}
