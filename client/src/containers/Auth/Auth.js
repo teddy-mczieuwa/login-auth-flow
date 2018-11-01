@@ -138,7 +138,7 @@ class Auth extends Component{
             ...this.state.controls,
             [inputIdentifier]: {
                 ...this.state.controls[inputIdentifier],
-                blurred: true
+                blurred: this.state.controls[inputIdentifier].value !== ''
             }
 
         }

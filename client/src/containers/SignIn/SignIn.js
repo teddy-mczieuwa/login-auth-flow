@@ -31,6 +31,7 @@ class SignIn extends Component{
 
                 valid: false,
                 touched: false,
+                blurred: false,
                 disabled: false
             },
 
@@ -51,6 +52,7 @@ class SignIn extends Component{
 
                 valid: false,
                 touched: false,
+                blurred: false,
                 disabled: false,
             }
         },
@@ -89,7 +91,17 @@ class SignIn extends Component{
         }
         this.setState({controls: controls, formValidity: isValid})
     };
+    onBlurHandler = (event, inputIdentifier)=> {
+        let controlsForBlur = {
+            ...this.state.controls,
+            [inputIdentifier]: {
+                ...this.state.controls[inputIdentifier],
+                blurred: this.state.controls[inputIdentifier].value !== ''
+            }
 
+        };
+        this.setState({controls: controlsForBlur})
+    }
 
     onSubmitHandler= (event)=> {
         event.preventDefault();
@@ -143,6 +155,8 @@ class SignIn extends Component{
                     shouldBeValidated = {true}
                     valueType={input.id}
                     disabled={input.config.disabled}
+                    isBlurredOut={input.config.blurred}
+                    blurred={(event)=>this.onBlurHandler(event, input.id)}
 
                 />
             })}
